@@ -1,4 +1,4 @@
-<!DOCTYPE >
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8"/>
@@ -7,21 +7,18 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="responsive.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=greek,greek-ext" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&amp;subset=greek,greek-ext" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<script src="gamato.js"></script>
 </head>
 <style>
 
 html,body{
 	margin: 0px;
 	padding: 0px;
-
 }
+
 .sidenav {
     height: 100%;
     position: fixed;
@@ -29,14 +26,12 @@ html,body{
     width: 0;
     top: 0;
     right: 0;
-    background-color: #474b4dcf;
+    background-color: #191a1b;
     color: #b8b8c2;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 74px;
-    font-size: 42px;
-    font-family: 'Roboto Condensed', sans-serif;
-    text-align: center;
+    font-size: 36px;
 }
 
 
@@ -45,13 +40,6 @@ html,body{
     color: #a9a8b2;    
     
 }
-.dropdown, .dropup {
-    position: absolute;
-    z-index: 1;
-    right: 16px;
-    top: 17px;
-}
-
 .bg-dark {
     background-color: #3b3f4273!important;
 }
@@ -61,9 +49,7 @@ html,body{
 
 }
 .dropdown-menu{
-	left: -108px;
-	font-family: 'Roboto Condensed', sans-serif;
-	font-size: 1.3rem;
+	left: -99px;
 }
 
 .carousel-indicators li {
@@ -80,12 +66,6 @@ html,body{
 .navbar-nav ul{
 	left: -120px !important;
 }
-
-.dropdown-menu {
-    position: absolute !important;
-}
-
-/*DEYTERO SECTION*/
 .welcome{
 	width: 100%
 	font-family: 'Open Sans', sans-serif;
@@ -108,8 +88,6 @@ html,body{
     padding-top: 50px;
     padding-bottom: 50px;
     font-family: 'Covered By Your Grace', cursive;
-    max-width:1952px;
-    margin: 0 auto;
 }
 .place1, .place2{
 	position: relative;
@@ -123,7 +101,7 @@ html,body{
   right: 0;
   height: 100%;
   width: 100%;
-  opacity: 0;  
+  opacity: 0;
   transition: .7s ease;
   background-color: #3b3f42;
 }
@@ -139,7 +117,7 @@ html,body{
   -ms-transform: translate(-50%, -50%);
   text-align: center;
 }
-/*OTAN GINETE HOVER STHN EIKONA TO OPACITY 8A FANEI PLEON */
+
 .place1:hover .overlay {
   opacity: 0.7;
 }
@@ -191,13 +169,9 @@ html,body{
     color: #deddea;
     background-color: #080808;
     border-radius: 0px;
-    border-color: #000000;    
+    border-color: #000000; 
+    
 }
-
-.btn-info:hover{
-	background-color: red;
-}
-
 .form-control{
 	border-radius: 0px;
 }
@@ -223,43 +197,42 @@ html,body{
 .col-sm-2.jumb-column{
 	color: #f5e7ce;
 	font-size: 13px;
-	border-left: 1px solid #deddea;
 }
-ul {
-  list-style-type: none;
-}
+/*.fa-instagram:before , .fa-facebook:before {
+    content: "\f09a";
+    padding-right: 14px;
+}*/
 
 </style>
 <body>
-<!-- 	<div id="side" class="sidenav" value="reduce">
+	<div id="side" class="sidenav" value="reduce">
 	  
-	  <a href="./menu!.html">Menu</a>
-	  <a href="./burgerhouses.html">Burger Houses</a>
+	  <a href="#">About</a>
+	  <a href="#">Services</a>
 	  <a href="#">Clients</a>
-	</div> -->
- <div class="container-fluid">
-
+	  <a href="#">Contact</a>
+	</div>
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
   <!-- Brand -->
-  		<a class="navbar-brand justify-content-left" href="./index.html"><img src="logo3.png"></a>
-  		<div id="side" class="sidenav" value="reduce">
-	  
-			  <a href="./menu!.html">Menu</a>
-			  <a href="./burgerhouses.html">Burger Houses</a>
-			  <a href="#">Clients</a>
-		</div>
-  		
-	
-		<ul class=" navbar-nav ml-auto">
-		  <li class="nav-item dropdown">
-	          <a class="nav-link">
-	        	<i class="fa fa-bars" id="bars" style="font-size:36px"></i>
-	      	  </a>
- 	</li>
-	</ul>
+  <a class="navbar-brand justify-content-left" href=""><img src="logo3.png"></a>
 
+  <!-- Links -->
+ <div class="collapse navbar-collapse justify-content-end " id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li>
+          <a class="nav-link">
+        	<i class="fa fa-bars" id="bars" style="font-size:36px"></i>
+      	  </a>
+
+<!--           <div class="dropdown-menu">
+        	<a class="dropdown-item" href="#">Link 1</a>
+        	<a class="dropdown-item" href="#">Link 2</a>
+        	<a class="dropdown-item" href="#">Link 3</a>
+      	 </div> -->
+        </li>
+      </ul>
+    </div>
   </nav>
-</div>
 	<div id="demo" class="carousel slide" data-ride="carousel">
 	  	<ul class="carousel-indicators">
 		    <li data-target="#demo" data-slide-to="0" class="active"></li>
@@ -268,7 +241,7 @@ ul {
 	 	 </ul>
 		  <div class="carousel-inner">
 		    <div class="carousel-item active">
-		      <img src="BurgerBurger.jpg" alt="Los Angeles" width="100%" max-height="741px">
+		      <img src="image.jpg" alt="Los Angeles" width="100%" max-height="741px">
 		      <div class="carousel-caption">
 		      </div>   
 		    </div>
@@ -307,8 +280,8 @@ ul {
 		  <div class="container-fluid">
 			    <div class="row">
 			      			      
-			      
-			      <div class="col-sm-4 col-xl-4">
+			      <div class="col-sm-0 col-lg-2"></div>
+			      <div class="col-sm-4 col-lg-2 ">
 			      		<div class="place1">
 			      			<img src="rest1.jpg" max-width="421" height="277">  
 			      				<div class="overlay">
@@ -316,7 +289,7 @@ ul {
     							</div>
 				  		</div>
 				  </div>
-			      <div class="col-sm-4 col-xl-4">
+			      <div class="col-sm-4 col-lg-2 ">
 			      		<div class="place2">
 			      			<img src="rest2.jpg" max-width="421" height="277">  
 			      				<div class="overlay">
@@ -324,9 +297,9 @@ ul {
     							</div>
 				  		</div>
 				  </div>
-				  <div class="col-sm-4 col-xl-4">
+				  <div class="col-sm-4 col-lg-2">
 			      		<div class="place2">
-			      			<img src="rest3.jpg" max-width="421" height="277">  
+			      			<img src="rest2.jpg" max-width="421" height="277">  
 			      				<div class="overlay">
     								<div class="text">Kentro</div>
     							</div>
@@ -394,5 +367,34 @@ ul {
 	         
 	  </div>
 	</div>  
+	<!-- END OF JUMBOTRON!!!!!!!! -->
+	<script>
+		
+			$('a.nav-link').click(function(){
+
+				var nWidth = $(".sidenav"). attr("value");
+				  
+				// console.log(nWidth);
+				if( nWidth==="reduce" ) {
+					 	console.log(nWidth)
+					 	$(".sidenav").css({"overflow-x":"visible","width":"200px"});
+					 	$(".sidenav").attr('value','expand');
+					 	$("#bars").attr('class','fa fa-close');
+
+
+				}
+				else if( nWidth==="expand" ){
+					 	$(".sidenav").css({"overflow-x":"hidden","width":"0"});
+					 	$(".sidenav").attr('value','reduce');
+					 	$("#bars").attr('class','fa fa-bars');
+
+
+				}
+	 
+			});
+		
+
+
+	</script>
 </body>
 </html>

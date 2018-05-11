@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8"/>
+	<link rel="icon" href="logo3.png" type="image/gif" sizes="32x32">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&amp;subset=greek,greek-ext" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="responsive.css">
+	<link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="jscript.js"></script>
+	<script src="http://maps.google.com/maps/api/js?sensor=false" 
+          type="text/javascript">
+          	
+    </script>
+  <script src="gamato.js"></script>  
+	</head>
+	<style>
+
+
+
+	html,body{
+		margin: 0px;
+		padding: 0px;
+	}
+
+	/*NAVBAR!!!!*/
+
+	.sidenav {
+	    height: 100%;
+	    position: fixed;
+	    z-index: 1;
+	    width: 0;
+	    top: 0;
+	    right: 0;
+	    background-color: #191a1b;
+	    color: #b8b8c2;
+	    overflow-x: hidden;
+	    transition: 0.5s;
+	    padding-top: 74px;
+	    font-size: 36px;
+	}
+
+
+	.sidenav a{
+	    
+	    color: #a9a8b2;    
+	    
+	}
+	.bg-dark {
+	    background-color: #3b3f4273!important;
+	}
+
+	.dropdown-toggle::after {
+	    display: none;
+
+	}
+	.dropdown-menu{
+		left: -99px;
+	}
+	.navbar-brand img{
+		width: 68px;
+		height: 59px;
+	}
+
+	.navbar-nav ul{
+		left: -120px !important;
+	}
+	.dropdown-menu {
+    position: absolute !important;
+	}
+	 /*END OF NAVBAR*/
+
+	.address{
+		font-weight: 800;
+	    font-size: 44px;
+	    font-family: 'Covered By Your Grace', cursive;
+	    padding-top:48px;
+	    padding-bottom: 48px;
+	}
+	.house{
+		font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 500;
+		font-size: 21px;
+	}
+
+	.map{
+		position: relative;
+	}
+
+	
+	/*JUMBOTRON!!!*/
+	.jumbotron {
+	    
+	     margin-bottom: 0rem; 
+	     background-color: #6f6d6d;
+	     border-radius: 0rem;
+	 		
+	}
+
+
+	.fourth-cont{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.col-sm-4.deliv {
+	    font-size: 33px;
+	    line-height: 1.1em;
+	    color: #e69c18;
+	}
+	.col-sm-2.jumb-column{
+		color: #f5e7ce;
+		font-size: 13px;
+    border-left: 1px solid #deddea;
+	}
+
+ul {
+  list-style-type: none;
+}
+
+
+	</style>
+	<body>
+    <div id="side" class="sidenav" value="reduce">
+    
+      <a href="./menu!.html">Menu</a>
+      <a href="./burgerhouses.html">Burger Houses</a>
+      <a href="#">Clients</a>
+    </div>
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+	  <!-- Brand NAME -->
+		  	<a class="navbar-brand justify-content-left" href="./index.html"><img src="logo3.png"></a>
+
+		  <!-- RIGHT BUTTON -->
+			
+			      <ul class="navbar-nav ml-auto">
+				  <li class="nav-item dropdown">
+			          <a class="nav-link">
+			        	<i class="fa fa-bars" style="font-size:36px"></i>
+			      	  </a>
+			      	  <!-- DROPDOWN MENU -->
+			          <div class="dropdown-menu">
+			        	
+			        	<a class="dropdown-item" href="./menu!.html">Menu</a>
+			        	<a class="dropdown-item" href="./burgerhouses.html">Burger Houses</a>
+			        	<a class="dropdown-item" href="#">Link 3</a>
+			      	 </div>
+			       </li>
+			      </ul>
+
+	  </nav>
+
+	<!-- CODE FOR GOOGLEMAPS FROM W3SCHOOOLS AND GOOGLEMAPS API -->
+	 <div id="map" style="width: 100%; height: 525px;">
+	 	<script>
+    var locations = [
+      ['Megalou Alexandrou 45', 40.667085, 22.914507, 4],
+      ['Tsimiski 100', 40.629732, 22.947281, 5],
+      ['Iasonidou 23', 40.582969, 22.952292, 3]
+    ];
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 11,
+      center: new google.maps.LatLng(40.640063,22.944419),
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      styles: [
+
+    {
+      "elementType": "geometry",
+      "stylers": [
+        {
+          "color": "#f5f5f5"
+        }
+      ]
+    },
+    {
+      "elementType": "labels.icon",
+      "stylers": [
+        {
+          "visibility": "off"
+        }
+      ]
+    },
+    {
+      "elementType": "labels.text.fill",
+      "stylers": [
+        {
+          "color": "#616161"
+        }
+      ]
+    },
+    {
+      "elementType": "labels.text.stroke",
+      "stylers": [
+        {
+          "color": "#f5f5f5"
+        }
+      ]
+    },
+    {
+      "featureType": "administrative.land_parcel",
+      "elementType": "labels.text.fill",
+      "stylers": [
+        {
+          "color": "#bdbdbd"
+        }
+      ]
+    },
+    {
+      "featureType": "poi",
+      "elementType": "geometry",
+      "stylers": [
+        {
+          "color": "#eeeeee"
+        }
+      ]
+    },
+    {
+      "featureType": "poi",
+      "elementType": "labels.text.fill",
+      "stylers": [
+        {
+          "color": "#757575"
+        }
+      ]
+    },
+    {
+      "featureType": "poi.park",
+      "elementType": "geometry",
+      "stylers": [
+        {
+          "color": "#e5e5e5"
+        }
+      ]
+    },
+    {
+      "featureType": "poi.park",
+      "elementType": "labels.text.fill",
+      "stylers": [
+        {
+          "color": "#9e9e9e"
+        }
+      ]
+    },
+    {
+      "featureType": "road",
+      "elementType": "geometry",
+      "stylers": [
+        {
+          "color": "#ffffff"
+        }
+      ]
+    },
+    {
+      "featureType": "road.arterial",
+      "elementType": "labels.text.fill",
+      "stylers": [
+        {
+          "color": "#757575"
+        }
+      ]
+    },
+    {
+      "featureType": "road.highway",
+      "elementType": "geometry",
+      "stylers": [
+        {
+          "color": "#dadada"
+        }
+      ]
+    },
+    {
+      "featureType": "road.highway",
+      "elementType": "labels.text.fill",
+      "stylers": [
+        {
+          "color": "#616161"
+        }
+      ]
+    },
+    {
+      "featureType": "road.local",
+      "elementType": "labels.text.fill",
+      "stylers": [
+        {
+          "color": "#9e9e9e"
+        }
+      ]
+    },
+    {
+      "featureType": "transit.line",
+      "elementType": "geometry",
+      "stylers": [
+        {
+          "color": "#e5e5e5"
+        }
+      ]
+    },
+    {
+      "featureType": "transit.station",
+      "elementType": "geometry",
+      "stylers": [
+        {
+          "color": "#eeeeee"
+        }
+      ]
+    },
+    {
+      "featureType": "water",
+      "elementType": "geometry",
+      "stylers": [
+        {
+          "color": "#c9c9c9"
+        }
+      ]
+    },
+    {
+      "featureType": "water",
+      "elementType": "labels.text.fill",
+      "stylers": [
+        {
+          "color": "#9e9e9e"
+        }
+      ]
+    }
+  ]
+
+    });
+    // KWDIKAS POU VRETHIKE STO GOOGLE MAP JAVASCRIPT API kai genika sto internet
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+    var icon = {
+    url: "mini.png", // url
+    scaledSize: new google.maps.Size(30, 30), // scaled size
+    origin: new google.maps.Point(0,0), // origin
+    anchor: new google.maps.Point(0, 0) // anchor
+	};
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map,
+        icon:icon
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+</script>
+	 </div>
+
+<!-- END OF CODE OF GOOGLEMAPS API -->
+	 	
+	 	
+	
+		
+	<div class="container-fluid address">
+		<div class="row">
+			<div class="col-sm-4 ">
+				<span>Delivery take out<br>dive in </span>
+			</div>
+
+			<div class="col-sm-2 house">
+				<span><b>EUOSMOS</b>
+          <br>
+          Megalou Alexandrou 45
+        </span>
+			</div>
+			<div class="col-sm-2 house">
+				<span><b>KENTRO</b>
+          <br>Tsimiski 100</span>
+			</div>
+			<div class="col-sm-2 house">	
+				<span><b>KALAMARIA</b>
+          <br>Iasondou 23</span>
+			</div>
+
+		</div>
+
+
+	</div>	
+
+
+
+
+
+	  		<!-- JUMBOTRON!!!!! -->
+	 <div class="container-fluid fourth-cont">			      			      
+
+
+		  <div class="jumbotron">
+			   <div class="row">
+				   <div class="col-sm-4 deliv">
+				   <span>
+				   	<b>To Order Call<br>18335</span></b>
+				   </div>			
+
+				   <div class="col-sm-2 jumb-column">
+					   	<ul>
+					   		<li>Philosophy</li>
+					   		<li>Menu</li>
+					   		<li>Stores</li>
+					   		<li>Loyalty Program</li>
+					   	</ul>
+				   </div>
+				   <div class="col-sm-2 jumb-column">
+				   		<ul>
+				   			<li>Franchising</li>
+				   			<li>Your Opinion</li>
+				   			<li>Job Opportunities</li>
+				   			<li>FAQ</li>
+				   		</ul>
+				   	
+				   </div>
+				   <div class="col-sm-2"></div>
+				   <div class="col-sm-2">
+				   	<i class="fa fa-instagram" style="font-size:36px"></i>
+				   	<i class="fa fa-facebook-f" style="font-size:36px"></i>
+				   	<i class="fa fa-twitter" style="font-size:36px"></i>
+				   </div>
+			  </div>
+		         
+		  </div>
+		</div>  
+		<!-- END OF JUMBOTRON!!!!!!!! -->
+	</body>
+
+</html>
