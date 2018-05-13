@@ -36,20 +36,27 @@
 	    width: 0;
 	    top: 0;
 	    right: 0;
-	    background-color: #191a1b;
-	    color: #b8b8c2;
+	    background-color: #474b4dcf;
+	    color: #e4e3e4;
 	    overflow-x: hidden;
 	    transition: 0.5s;
 	    padding-top: 74px;
 	    font-size: 36px;
+      text-align: center;
 	}
 
 
 	.sidenav a{
 	    
-	    color: #a9a8b2;    
+	    color: #e4e3e4;    
 	    
 	}
+  .dropdown {
+    position: absolute;
+    z-index: 1;
+    right: 16px;
+    top: 17px;
+}
 	.bg-dark {
 	    background-color: #3b3f4273!important;
 	}
@@ -117,23 +124,25 @@
     border-left: 1px solid #deddea;
 	}
 
-ul {
+  ul {
   list-style-type: none;
+  padding-left: 0px;
 }
+
 
 
 	</style>
 	<body>
-    <div id="side" class="sidenav" value="reduce">
-    
-      <a href="./menu!.html">Menu</a>
-      <a href="./burgerhouses.html">Burger Houses</a>
-      <a href="#">Clients</a>
-    </div>
 		<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
 	  <!-- Brand NAME -->
 		  	<a class="navbar-brand justify-content-left" href="./index.html"><img src="logo3.png"></a>
-
+              <div id="side" class="sidenav" value="reduce">
+                <ul>
+                  <li><a href="./menu!.html">Menu</a></li>
+                  <li><a href="./burgerhouses.html">Burger-Houses</a></li>
+                  <li><a href="#">Clients</a></li>
+                </ul>  
+              </div>
 		  <!-- RIGHT BUTTON -->
 			
 			      <ul class="navbar-nav ml-auto">
@@ -364,7 +373,7 @@ ul {
 		
 	<div class="container-fluid address">
 		<div class="row">
-			<div class="col-sm-4 ">
+			<div class="col-sm-4 dive">
 				<span>Delivery take out<br>dive in </span>
 			</div>
 
