@@ -59,10 +59,10 @@ $(document).ready(function(){
 	});
 
 	}
-				// if ($(window).width() > 2000) {
-				// $(".navbar").css("height","116px");
-				// }
-				// else {
+				if ($(window).width() > 2000) {
+				$(".navbar").css("height","116px");
+				}
+				else {
 				
-				// }
-				// });
+				}
+				});
